@@ -3,14 +3,18 @@ package builder.telegram;
 public class TelegramBuilder {
     private String text;
     private Object attachment;
+
     public TelegramBuilder setText(String text) {
         this.text = text;
-    return this;}
+        return this;
+    }
+
     public TelegramBuilder setAttachment(Object attachment) {
         this.attachment = attachment;
         return this;
     }
-    public TelegramMessage build(){
+
+    public TelegramMessage build() {
         return new TelegramMessage(this);
     }
 

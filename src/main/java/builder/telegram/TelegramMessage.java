@@ -3,12 +3,14 @@ package builder.telegram;
 public class TelegramMessage {
     private String text;
     private Object attachment;
-    protected TelegramMessage(TelegramBuilder builder ) {
-       this.text = builder.getText();
-       this.attachment = builder.getAttachment();
+
+    protected TelegramMessage(TelegramBuilder builder) {
+        this.text = builder.getText();
+        this.attachment = builder.getAttachment();
     }
+
     public static TelegramBuilder builder() {
-        return new TelegramBuilder() ;
+        return new TelegramBuilder();
     }
 
     @Override

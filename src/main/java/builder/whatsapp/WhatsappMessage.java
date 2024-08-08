@@ -5,9 +5,9 @@ import java.sql.Time;
 public class WhatsappMessage {
     private String text;
     private Time time;
-    public WhatsappMessage(WhatsappMessageBuilder whatsappMessageBuilder) {
-        this.text = whatsappMessageBuilder.getText();
-        this.time = whatsappMessageBuilder.getTime();
+    public WhatsappMessage(WhatsappMessageBuilder builder) {
+        this.text = builder.getText();
+        this.time = builder.getTime();
 
     }
 

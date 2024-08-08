@@ -22,9 +22,9 @@ public class Main {
                 .build();
         System.out.println(whatsappMessage.toString());
 
-        MessageService messageService = new MessageService(new TelegramBuilder());
-        messageService.sendTextMessage("telegram message");
-        messageService.sendAttatchment(new Object());
+       // MessageService messageService = new MessageService(new TelegramBuilder());
+     //   messageService.sendTextMessage("telegram message");
+       // messageService.sendAttatchment(new Object());
 
 
 
