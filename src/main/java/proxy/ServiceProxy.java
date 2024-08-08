@@ -1,7 +1,7 @@
 package proxy;
 
 public class ServiceProxy implements Service{
-    private MyService myService;
+    private Service myService;
     public ServiceProxy(MyService myService) {
         this.myService = myService;
     }
@@ -9,7 +9,9 @@ public class ServiceProxy implements Service{
     @Override
     public void action() {
         System.out.println("before action");
-        myService.action();
+
+     myService.action();
+
         System.out.println("after action");
 
     }
