@@ -15,5 +15,6 @@ public class Min extends BaseHandler {
        if (request==null||request < min) {
            errors.add("Min number is lower than " + min);
        }
+       super.handle(request, errors);
     }
 }

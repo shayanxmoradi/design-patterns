@@ -10,5 +10,6 @@ public class NotNull extends BaseHandler {
         if (request == null) {
             errors.add("request is null");
         }
+        super.handle(request, errors);
     }
 }

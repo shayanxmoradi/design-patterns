@@ -15,5 +15,6 @@ public class Max extends BaseHandler {
        if (request==null|| request > max) {
            errors.add("max number is gerather than " + max);
        }
+       super.handle(request, errors);
     }
 }

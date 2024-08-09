@@ -20,11 +20,13 @@ public abstract class BaseHandler implements Handler {
     public Set<String> handle(Integer requst) {
         HashSet<String> errors = new HashSet<>();
         handle(requst, errors);
-        if(next != null) {
-
-            next.handle(requst,errors);
-        }
         return errors;
+
     }
-     public abstract void handle(Integer request,Set<String> errors);
+     public  void handle(Integer request,Set<String> errors){
+         if(next != null) {
+
+             next.handle(request,errors);
+         }
+     }
 }

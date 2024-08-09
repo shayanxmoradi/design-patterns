@@ -5,11 +5,13 @@ import java.util.Set;
 public class Main {
     public static void main(String[] args) {
 
-        BaseHandler handler = new Min(4);
-handler.setNext(new NotNull());
+        BaseHandler min = new Min(4);
+        NotNull notNull = new NotNull();
+        Max max = new Max(5);
+notNull.setNext(min);
 
-        handler.setNext(new Max(5));
-        Set<String> errors = handler.handle(2);
+min.setNext(max);
+        Set<String> errors = notNull.handle(2);
         System.out.println(errors);
 
     }
