@@ -11,7 +11,7 @@ public class NotNull extends BaseValidator {
     public void handle(String email, Set<String> errors) {
         if (email == null) {
             errors.add("email is null");
-        }
+        }else
         super.handle(email, errors);
     }
 
