@@ -1,8 +1,7 @@
-package observer;
+package observer.introduction;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.Flow;
 
 public class Publisher {
     private final List<Subscriber> subscribers = new ArrayList<>();
@@ -10,6 +9,7 @@ public class Publisher {
 
     public void subscribe(Subscriber subscriber) {
         subscribers.add(subscriber);
+
     }
 
     public void unsubscribe(Subscriber subscriber) {
@@ -18,7 +18,7 @@ public class Publisher {
 
     public void notifySubscribers() {
         for (Subscriber subscriber : subscribers) {
-            subscriber.update(this);
+            subscriber.state(state);
         }
     }
 
