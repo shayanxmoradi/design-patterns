@@ -1,4 +1,4 @@
-package chainofresponsibilities;
+package chainofresponsibilities.simplee;
 
 public class HandlerC extends BaseHandler{
     @Override

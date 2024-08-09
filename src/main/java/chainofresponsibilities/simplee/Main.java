@@ -1,4 +1,4 @@
-package chainofresponsibilities;
+package chainofresponsibilities.simplee;
 
 public class Main {
     public static void main(String[] args) {
