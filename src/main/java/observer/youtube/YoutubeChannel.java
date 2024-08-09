@@ -4,12 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class YoutubeChannel {
+    private final String name;
+
     private final List<Subsciber> subscribers = new ArrayList<>();
     private final List<String> videos = new ArrayList<>();
 
+    public YoutubeChannel(String name) {
+        this.name = name;
+    }
+
     public String getLatestVideo() {
         if (!videos.isEmpty()) {
-            return videos.get(videos.size() - 1);
+            return videos.getLast();
         }
         return null;
     }

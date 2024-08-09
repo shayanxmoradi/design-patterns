@@ -13,7 +13,11 @@ public class SubscriberImp implements Subsciber {
     public void update(YoutubeChannel channel) {
         String latestVideo = channel.getLatestVideo();
         if (latestVideo != null) {
-            System.out.println(name + " was notified of a new video: " + latestVideo);
+            new Thread(
+                ()->
+                        System.out.println(name + " was notified of a new video: " + latestVideo))
+                                .start();
+            }
         }
-    }
+
 }

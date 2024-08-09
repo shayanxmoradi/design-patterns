@@ -7,7 +7,7 @@ public class Main {
         Subsciber subscriber3 = new SubscriberImp("Subscriber 3");
 
 
-        YoutubeChannel channel = new YoutubeChannel();
+        YoutubeChannel channel = new YoutubeChannel("teset");
         channel.subscribe(subscriber1);
         channel.subscribe(subscriber2);
         channel.subscribe(subscriber3);
